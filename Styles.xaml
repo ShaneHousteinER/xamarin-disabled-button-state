@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="InvestSmart.App">
+	<Application.Resources>
+		<ResourceDictionary>
+
+		    <Color x:Key="DarkBlue">#242342</Color>
+		    <Color x:Key="BrightBlue">#3376F6</Color>
+		    <Color x:Key="ButtonYellow">#F2CE48</Color>
+            <Color x:Key="ButtonGreen">#19B499</Color>
+		    <Color x:Key="ButtonGray">#E0E2E4</Color>
+		    <Color x:Key="HighlightRed">#E90031</Color>
+
+		    <Color x:Key="NewsHeaderDarkBar">#B2BCC9</Color>
+		    <Color x:Key="TabsDarkBlue">#19385D</Color>
+		    <Color x:Key="BlueLightBG">#F5F8FC</Color>
+		    <Color x:Key="PlaceHolderDark">#242342</Color>
+
+			<Color x:Key="ListSeparator">#B2BCC9</Color>
+			<Color x:Key="AltRowColor">#EFF0F1</Color>
+			
+			<Color x:Key="TotalRowColor">#DDDDDD</Color>
+			<Color x:Key="TotalTextColor">#000000</Color>
+			
+		    <Color x:Key="ActivityIndicatorColor">#17375E</Color>
+		    <Color x:Key="SwitchButtonBackground">#F5F9FC</Color>
+		    <Color x:Key="SwitchButtonOutline">#BAC6D2</Color>
+
+		    <Color x:Key="BuyGreen">#00BE62</Color>
+		    <Color x:Key="BuyGreenSoft">#F7FDFA</Color>
+		    <Color x:Key="SellRed">#ED4D47</Color>
+		    <Color x:Key="SellRedSoft">#FFD1D1</Color>
+		    <Color x:Key="HoldPurple">#5C6C8E</Color>
+		    <Color x:Key="HoldPurpleSoft">#D1D8E8</Color>
+		    <Color x:Key="Gray">#D3D3D3</Color>
+		    <Color x:Key="GraySoft">#F9F9F9</Color>
+		    <Color x:Key="CeasedCoverage">#D3D3D3</Color>
+		    <Color x:Key="CeasedCoverageSoft">#F9F9F9</Color>
+		    <Color x:Key="UnderReview">#D3D3D3</Color>
+		    <Color x:Key="UnderReviewSoft">#F9F9F9</Color>
+
+
+			
+			<Style x:Key="ButtonStyle" TargetType="Button">
+				<Setter Property="BackgroundColor" Value="{StaticResource ButtonGreen}"/>
+		        <Setter Property="FontFamily" Value="OpenSans"/>
+		        <Setter Property="TextColor" Value="#242342"/>
+		        <Setter Property="WidthRequest" Value="150"/>
+		        <Setter Property="HeightRequest" Value="50"/>
+		        <Setter Property="HorizontalOptions" Value="Center"/>
+		        <Setter Property="VerticalOptions" Value="Center"/>
+			</Style>
+
+            <Style x:Key="ButtonStyleDisabled" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonGray}"/>
+                <Setter Property="FontFamily" Value="OpenSans"/>
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+                <Setter Property="WidthRequest" Value="150"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            
+			
+			
+			<Style x:Key="LabelStyle" TargetType="Label">
+				<Setter Property="TextColor" Value="Black"/>
+				<Setter Property="FontFamily" Value="OpenSans"/>
+			</Style>
+
+			<Style x:Key="LabelLight" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+				<Setter Property="FontFamily" Value="OpenSans-Light"/>
+			</Style>
+
+			<!--<Style x:Key="LabelRegular" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+				<Setter Property="FontFamily" Value="OpenSans"/>
+			</Style>-->
+
+			<Style x:Key="LabelSemibold" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+				<Setter Property="FontFamily" Value="OpenSans-Semibold"/>
+			</Style>
+			
+			<Style x:Key="LabelRed" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+				<Setter Property="TextColor" Value="Red"/>
+			</Style>
+			
+			<Style x:Key="LabelBold" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+				<Setter Property="FontFamily" Value="OpenSans-Bold"/>
+			</Style>
+
+			<Style x:Key="LabelExtraBold" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+				<Setter Property="FontFamily" Value="OpenSans-ExtraBold"/>
+			</Style>
+
+
+			<Style x:Key="LabelLogin" TargetType="Label">
+				<Setter Property="TextColor" Value="White"/>
+				<Setter Property="FontFamily" Value="OpenSans"/>
+			</Style>
+			
+			<Style x:Key="LabelLoginLight" TargetType="Label" BasedOn="{StaticResource LabelLogin}">
+				<Setter Property="FontFamily" Value="OpenSans-Light"/>
+			</Style>
+			
+			<Style x:Key="LabelLoginBold" TargetType="Label" BasedOn="{StaticResource LabelLogin}">
+				<Setter Property="FontFamily" Value="OpenSans-Bold"/>
+			</Style>
+			
+
+			
+			<Style x:Key="EntryStyle" TargetType="Entry">
+				<Setter Property="TextColor" Value="Black"/>
+				<Setter Property="FontFamily" Value="OpenSans"/>
+				<Setter Property="BackgroundColor" Value="White"/>
+			</Style>
+			
+			<Style x:Key="EntryLight" TargetType="Entry" BasedOn="{StaticResource EntryStyle}">
+				<Setter Property="FontFamily" Value="OpenSans-Light"/>
+			</Style>
+			
+			
+			<Style x:Key="EntryLogin" TargetType="Entry">
+				<Setter Property="TextColor" Value="Black"/>
+				<Setter Property="FontFamily" Value="OpenSans"/>
+				<Setter Property="BackgroundColor" Value="White"/>
+			</Style>
+
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

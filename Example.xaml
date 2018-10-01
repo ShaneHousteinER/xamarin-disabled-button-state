@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="InvestSmart.LoginPage"
+	xmlns:local="clr-namespace:InvestSmart;assembly=InvestSmart" 
+	xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+	BackgroundColor="#242342">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+			<local:CheckboxConverter x:Key="CheckboxConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+	
+	<ContentPage.Content>
+		<ScrollView x:Name="ScrollView">
+			<Grid x:Name="ScrollGrid" Padding="16,0" RowSpacing="10" ColumnSpacing="10">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="1"/>
+					<RowDefinition Height="120"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="30"/>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="30"/>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="20"/>
+					<RowDefinition Height="10"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="40"/>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="280"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+                
+				<ffimageloading:CachedImage VerticalOptions="Center" Grid.ColumnSpan="2" HorizontalOptions="Center" Grid.Row="1" Source="Investsmart.png" WidthRequest="250" Aspect="AspectFit" TransparencyEnabled="true"/>               
+
+				<StackLayout Grid.Row="2" Grid.ColumnSpan="2" IsClippedToBounds="true" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+					<Label Style="{StaticResource LabelLoginLight}" Text="Log in using your InvestSMART, Intelligent Investor or Eureka Report credentials." FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+				</StackLayout>
+				<Label x:Name="ScrollToHelperView" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource LabelLogin}" Text="Email address" FontSize="Small" VerticalTextAlignment="End"/>
+				<local:EntryBorderless x:Name="EditEmail" AutomationId="EditEmail" Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource EntryLogin}" Placeholder="Email address" Text="{Binding Email, Mode=TwoWay}" Keyboard="Email"/>
+				<Label Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource LabelLogin}" Text="Password" FontSize="Small" VerticalTextAlignment="End"/>
+				<local:EntryBorderless x:Name="EditPassword" AutomationId="EditPassword" Grid.Row="6" Grid.ColumnSpan="2" Style="{StaticResource EntryLogin}" Placeholder="Password" Text="{Binding Password, Mode=TwoWay}" IsPassword="true"/>
+
+				<StackLayout Grid.Row="7" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalOptions="FillAndExpand">
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Command="{Binding RememberTappedCommand}"/>
+					</StackLayout.GestureRecognizers>
+					<ffimageloading:CachedImage Source="{Binding Remember, Converter={StaticResource CheckboxConverter}}" WidthRequest="16" HeightRequest="16"/>
+					<Label Style="{StaticResource LabelLoginLight}" Text="Remember me" FontSize="Small" VerticalTextAlignment="End" VerticalOptions="End"/>
+				</StackLayout>
+				
+				<local:DisablingButton AutomationId="LoginButton" Grid.Row="9" EnabledStyle="{StaticResource ButtonStyle}" DisabledStyle="{StaticResource ButtonStyleDisabled}" Text="Log in" HorizontalOptions="FillAndExpand"
+					Command="{Binding LoginCommand}" IsEnabled="{Binding IsValid}"/>
+				<Button AutomationId="FreeTrialButton" Grid.Row="9" Grid.Column="1" Style="{StaticResource ButtonStyle}" Text="Not a member?" BackgroundColor="{StaticResource ButtonGray}" HorizontalOptions="FillAndExpand"
+					Command="{Binding FreeTrialCommand}"/>
+
+				<BoxView Grid.Row="10" Grid.ColumnSpan="2" HeightRequest="0.5" Color="{StaticResource ListSeparator}" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+				
+                <Label Grid.Row="11" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" VerticalOptions="Start" VerticalTextAlignment="Start"
+					 local:TappedGestureAttached.Command="{Binding ForgotPasswordCommand}">
+					<Label.FormattedText>
+						<FormattedString>
+							<Span Text="Forgotton Password? " FontFamily="OpenSans-Light" FontSize="Small" ForegroundColor="White"/>
+							<Span Text="Click here" FontFamily="OpenSans-Regular" FontSize="Small" ForegroundColor="White"/>
+						</FormattedString>
+					</Label.FormattedText>
+				</Label>
+
+			</Grid>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
