@@ -8,7 +8,7 @@ using System.ComponentModel;
 [assembly: ExportRenderer(typeof(DisablingButton), typeof(DisablingButtonRenderer))]
 namespace InvestSmart.Droid
 {
-    public class DisablingButtonRenderer : CustomButtonRenderer
+    public class DisablingButtonRenderer : ButtonRenderer
     {
         public DisablingButtonRenderer(Context context) : base(context) { }
 
