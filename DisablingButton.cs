@@ -8,8 +8,6 @@ namespace InvestSmart
     /// </summary>
     public class DisablingButton : Button
     {
-        private Style _normalStyle;
-
         public static readonly BindableProperty DisabledStyleProperty =
             BindableProperty.Create(nameof(DisabledStyle), typeof(Style), typeof(DisablingButton), null, BindingMode.TwoWay, null, (obj, oldValue, newValue) => { });
         
@@ -30,10 +28,7 @@ namespace InvestSmart
 
         public DisablingButton() : base()
         {
-            _normalStyle = Style;
-
             PropertyChanged += ExtendedButton_PropertyChanged;
-
         }
 
         private void ExtendedButton_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
