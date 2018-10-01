@@ -3,30 +3,28 @@
 	<Application.Resources>
 		<ResourceDictionary>
 
-		    <Color x:Key="ButtonGreen">#19B499</Color>
-		    <Color x:Key="ButtonGray">#E0E2E4</Color>
-		    
+			<Color x:Key="ButtonGreen">#19B499</Color>
+			<Color x:Key="ButtonGray">#E0E2E4</Color>
 			
 			<Style x:Key="ButtonStyle" TargetType="Button">
 				<Setter Property="BackgroundColor" Value="{StaticResource ButtonGreen}"/>
-		        <Setter Property="FontFamily" Value="OpenSans"/>
-		        <Setter Property="TextColor" Value="#242342"/>
-		        <Setter Property="WidthRequest" Value="150"/>
-		        <Setter Property="HeightRequest" Value="50"/>
-		        <Setter Property="HorizontalOptions" Value="Center"/>
-		        <Setter Property="VerticalOptions" Value="Center"/>
+				<Setter Property="FontFamily" Value="OpenSans"/>
+				<Setter Property="TextColor" Value="#242342"/>
+				<Setter Property="WidthRequest" Value="150"/>
+				<Setter Property="HeightRequest" Value="50"/>
+				<Setter Property="HorizontalOptions" Value="Center"/>
+				<Setter Property="VerticalOptions" Value="Center"/>
 			</Style>
 
-            <Style x:Key="ButtonStyleDisabled" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="{StaticResource ButtonGray}"/>
-                <Setter Property="FontFamily" Value="OpenSans"/>
-                <Setter Property="TextColor" Value="#FFFFFF"/>
-                <Setter Property="WidthRequest" Value="150"/>
-                <Setter Property="HeightRequest" Value="50"/>
-                <Setter Property="HorizontalOptions" Value="Center"/>
-                <Setter Property="VerticalOptions" Value="Center"/>
-            </Style>
-            
+			<Style x:Key="ButtonStyleDisabled" TargetType="Button">
+				<Setter Property="BackgroundColor" Value="{StaticResource ButtonGray}"/>
+				<Setter Property="FontFamily" Value="OpenSans"/>
+				<Setter Property="TextColor" Value="#FFFFFF"/>
+				<Setter Property="WidthRequest" Value="150"/>
+				<Setter Property="HeightRequest" Value="50"/>
+				<Setter Property="HorizontalOptions" Value="Center"/>
+				<Setter Property="VerticalOptions" Value="Center"/>
+			</Style>
 		</ResourceDictionary>
 	</Application.Resources>
 </Application>
