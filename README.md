@@ -5,3 +5,5 @@ A custom button class (DisablingButton.cs) is used to provide EnabledStyle and D
 PropertyChanged is used to check the enabled state, and swap in the associated style.
 
 This should have been enough, but unfortunately Xamarin does not allow text color to be changed on a disabled button, so renderers have been added to override the default behaviour. 
+
+Code developed for <a href="www.investsmart.com.au">InvestSMART</a>
