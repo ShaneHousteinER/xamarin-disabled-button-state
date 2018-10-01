@@ -6,4 +6,4 @@ PropertyChanged is used to check the enabled state, and swap in the associated s
 
 This should have been enough, but unfortunately Xamarin does not allow text color to be changed on a disabled button, so renderers have been added to override the default behaviour. 
 
-Code developed for <a href="www.investsmart.com.au">InvestSMART</a>
+Code developed for <a href="https://www.investsmart.com.au">InvestSMART</a>
