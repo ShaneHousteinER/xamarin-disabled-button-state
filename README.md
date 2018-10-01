@@ -1,5 +1,7 @@
-Complete example for changing text colour on a disabled button.
+Complete example for changing text colour on a disabled Xamarin Forms Button.
 
-Separate styles for enabled state and disabled state can be set in xml.
+A custom button class (DisablingButton.cs) is used to provide EnabledStyle and DisabledStyle properties.
 
-Because TextColor cannot be set on a disabled button, renderers are used to override the default behaviour.
+PropertyChanged is used to check the enabled state, and swap in the associated style.
+
+This should have been enough, but unfortunately Xamarin does not allow text color to be changed on a disabled button, so renderers have been added to override the default behaviour. 
